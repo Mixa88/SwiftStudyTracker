@@ -10,15 +10,14 @@ import SwiftData
 
 @Model
 class StudyEntry {
-    var id: UUID
+    var id = UUID()
     var date: Date
     var topic: String
     var durationInMinutes: Int
     var source: String
-    var notes: String?
+    var notes: String
     
-    init(id: UUID, date: Date, topic: String, durationInMinutes: Int, source: String, notes: String? = nil) {
-        self.id = id
+    init(date: Date, topic: String, durationInMinutes: Int, source: String, notes: String) {
         self.date = date
         self.topic = topic
         self.durationInMinutes = durationInMinutes
