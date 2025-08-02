@@ -46,14 +46,13 @@ struct AddEntryView: View {
                 }
                 
                 Section {
-                    Button("Save") {
+                    Button("Save Entry") {
                         let newEntry = StudyEntry(date: date, topic: topic, durationInMinutes: durationInMinutes, source: source, notes: notes)
                         modelContext.insert(newEntry)
                         dismiss()
                     }
                     .disabled(!formIsValid)
-                    .frame(height: 50)
-                    .frame(width: .infinity)
+                    .buttonStyle(.borderedProminent)
                 }
                     
                 }
