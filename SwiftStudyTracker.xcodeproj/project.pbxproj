@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		BA1477D12E3F773600D51A41 /* SwiftStudyTracker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftStudyTracker.xcodeproj; sourceTree = "<group>"; };
 		BAC1B1FB2E3E428A006041E1 /* SwiftStudyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BAC1B1FD2E3E428A006041E1 /* SwiftStudyTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SwiftStudyTracker;
+			name = SwiftStudyTracker;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -29,6 +30,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA1477D32E3F773600D51A41 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BAC1B1F22E3E428A006041E1 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +103,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BAC1B1FC2E3E428A006041E1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BA1477D32E3F773600D51A41 /* Products */;
+					ProjectRef = BA1477D12E3F773600D51A41 /* SwiftStudyTracker.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BAC1B1FA2E3E428A006041E1 /* SwiftStudyTracker */,
@@ -251,7 +263,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftStudyTracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = M4AN86ZBTV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +292,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftStudyTracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = M4AN86ZBTV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

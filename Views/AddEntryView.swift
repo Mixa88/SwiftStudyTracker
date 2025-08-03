@@ -52,7 +52,7 @@ struct AddEntryView: View {
                         dismiss()
                     }
                     .disabled(!formIsValid)
-                    .buttonStyle(.borderedProminent)
+                    
                 }
                     
                 }
