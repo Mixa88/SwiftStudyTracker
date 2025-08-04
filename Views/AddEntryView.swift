@@ -17,6 +17,8 @@ struct AddEntryView: View {
     @State private var notes: String = ""
     @State private var date = Date.now
     
+    @State private var tagInput: String = ""
+    
     
     var formIsValid: Bool {
         !topic.trimmingCharacters(in: .whitespaces).isEmpty

@@ -10,7 +10,10 @@ import SwiftData
 
 @Model
 class Tag {
+    @Attribute(.unique)
     var name: String
+    
+    var entries: [StudyEntry]?
     
     init(name: String) {
         self.name = name

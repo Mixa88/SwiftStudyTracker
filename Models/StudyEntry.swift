@@ -17,6 +17,9 @@ class StudyEntry {
     var source: String
     var notes: String
     
+    @Relationship(deleteRule: .nullify, inverse: \Tag.entries)
+    var tags: [Tag] = []
+    
     init(date: Date, topic: String, durationInMinutes: Int, source: String, notes: String) {
         self.date = date
         self.topic = topic
