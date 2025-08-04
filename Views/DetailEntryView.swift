@@ -20,7 +20,7 @@ struct DetailEntryView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 
-                // --- Блок с ключевыми метриками ---
+                
                 HStack {
                     // Источник
                     VStack(alignment: .leading) {
@@ -33,7 +33,7 @@ struct DetailEntryView: View {
                     
                     Spacer()
                     
-                    // Длительность
+                    
                     VStack(alignment: .leading) {
                         Text("ВРЕМЯ")
                             .font(.caption)
@@ -45,7 +45,7 @@ struct DetailEntryView: View {
                 .padding()
                 .background(.thinMaterial, in: .rect(cornerRadius: 12))
                 
-                // --- Блок с тегами ---
+                
                 if !entry.tags.isEmpty {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Теги")
@@ -67,7 +67,7 @@ struct DetailEntryView: View {
                     }
                 }
                 
-                // --- Блок с заметками ---
+                
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Заметки")
                         .font(.headline)
@@ -81,7 +81,7 @@ struct DetailEntryView: View {
                     }
                 }
                 
-                // --- Дата в самом низу ---
+                
                 Text("Запись от \(entry.date.formatted(date: .long, time: .shortened))")
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -114,15 +114,13 @@ struct DetailEntryView: View {
 }
 
 
-// СОЗДАЕМ ОТДЕЛЬНУЮ VIEW-ОБЕРТКУ ДЛЯ ПРЕВЬЮ
+
 private struct DetailPreviewContainer: View {
 
-    // Свойство для хранения результата.
-    // Либо получаем готовые данные (запись и контейнер), либо ошибку.
+    
     let result: Result<(StudyEntry, ModelContainer), Error>
 
-    // ИНИЦИАЛИЗАТОР - здесь мы выполняем всю опасную работу.
-    // init() - это не ViewBuilder, поэтому здесь можно использовать do-catch!
+   
     init() {
         do {
             let config = ModelConfiguration(isStoredInMemoryOnly: true)
@@ -136,28 +134,27 @@ private struct DetailPreviewContainer: View {
             
             container.mainContext.insert(example)
             
-            // Если все прошло успешно, сохраняем результат в свойство
+            
             self.result = .success((example, container))
             
         } catch {
-            // Если произошла ошибка, сохраняем ее
+            
             self.result = .failure(error)
         }
     }
 
-    // BODY - теперь только отображает готовый результат.
-    // `switch` поддерживается во ViewBuilder.
+    
     var body: some View {
         switch result {
         case .success(let (entry, container)):
-            // Ветка для успешного выполнения
+            
             NavigationStack {
                 DetailEntryView(entry: entry)
             }
             .modelContainer(container)
             
         case .failure(let error):
-            // Ветка для ошибки
+            
             Text("Failed to create preview: \(error.localizedDescription)")
         }
     }

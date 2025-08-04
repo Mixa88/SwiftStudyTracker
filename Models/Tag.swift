@@ -13,7 +13,9 @@ class Tag {
     @Attribute(.unique)
     var name: String
     
-    var entries: [StudyEntry]?
+    var id: UUID = UUID()
+    
+    var entries: [StudyEntry] = []
     
     init(name: String) {
         self.name = name

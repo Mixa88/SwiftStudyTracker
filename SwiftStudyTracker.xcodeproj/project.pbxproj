@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		BA0976422E41410700AEFCAB /* SwiftStudyTracker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftStudyTracker.xcodeproj; sourceTree = "<group>"; };
 		BA1477D12E3F773600D51A41 /* SwiftStudyTracker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftStudyTracker.xcodeproj; sourceTree = "<group>"; };
 		BA5C0B702E40C13500783521 /* SwiftStudyTracker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftStudyTracker.xcodeproj; sourceTree = "<group>"; };
 		BAC1B1FB2E3E428A006041E1 /* SwiftStudyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +32,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA0976442E41410700AEFCAB /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BA1477D32E3F773600D51A41 /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
@@ -117,6 +123,10 @@
 				{
 					ProductGroup = BA1477D32E3F773600D51A41 /* Products */;
 					ProjectRef = BA1477D12E3F773600D51A41 /* SwiftStudyTracker.xcodeproj */;
+				},
+				{
+					ProductGroup = BA0976442E41410700AEFCAB /* Products */;
+					ProjectRef = BA0976422E41410700AEFCAB /* SwiftStudyTracker.xcodeproj */;
 				},
 			);
 			projectRoot = "";
