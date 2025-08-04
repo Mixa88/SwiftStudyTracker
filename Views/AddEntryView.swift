@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AddEntryView: View {
     @Environment(\.modelContext) var modelContext
@@ -47,10 +48,15 @@ struct AddEntryView: View {
                     
                 }
                 
+                Section("Tags") {
+                    TextField("Tags (comma separated)", text: $tagInput)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                }
+                
                 Section {
                     Button("Save Entry") {
-                        let newEntry = StudyEntry(date: date, topic: topic, durationInMinutes: durationInMinutes, source: source, notes: notes)
-                        modelContext.insert(newEntry)
+                        saveEntry()
                         dismiss()
                     }
                     .disabled(!formIsValid)
@@ -61,6 +67,34 @@ struct AddEntryView: View {
                  .navigationTitle("Add New Entry ✍️")
             
             }
+        }
+    
+    private func saveEntry() {
+            
+            let newEntry = StudyEntry(date: date, topic: topic, durationInMinutes: durationInMinutes, source: source, notes: notes)
+            
+            
+            let tagNames = tagInput.split(separator: ",").map {
+                $0.trimmingCharacters(in: .whitespaces).lowercased()
+            }.filter { !$0.isEmpty }
+            
+            for name in tagNames {
+                
+                let predicate = #Predicate<Tag> { $0.name == name }
+                let descriptor = FetchDescriptor(predicate: predicate)
+                
+                if let existingTag = try? modelContext.fetch(descriptor).first {
+                    
+                    newEntry.tags.append(existingTag)
+                } else {
+                    
+                    let newTag = Tag(name: name)
+                    newEntry.tags.append(newTag)
+                }
+            }
+            
+            
+            modelContext.insert(newEntry)
         }
     }
 
