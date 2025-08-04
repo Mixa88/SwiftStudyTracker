@@ -42,15 +42,13 @@ It was inspired by Paul Hudson’s lessons and serves as my first "from-scratch"
 
 ## 📸 Screenshots
 
-<img width="350" alt="simulator_screenshot_9FFC76C9-C787-432F-8EA7-862E1B870690" src="https://github.com/user-attachments/assets/ff081483-b496-4307-be4b-1d85fa2aec22" />
 
-<img width="350" alt="simulator_screenshot_B52B41F5-DB89-4FB5-A5D6-A8342E5A9405" src="https://github.com/user-attachments/assets/db6b2074-6342-4cfd-bdc7-c4363d16cf6d" />
+<img width="350" alt="simulator_screenshot_42094851-EA8A-4474-863F-BEA0F6C39FFA" src="https://github.com/user-attachments/assets/0e3eb524-dfea-4bc7-929d-cb281d284205" />
 
-<img width="350" alt="simulator_screenshot_741916FB-CB29-4D7B-93BC-775308C72A15" src="https://github.com/user-attachments/assets/fa385816-6ab3-4b22-85aa-001bf4ae3f5c" />
+<img width="350" alt="simulator_screenshot_30E75CC1-E0B8-4FB6-9BB1-6706272CED19" src="https://github.com/user-attachments/assets/20a5620f-9397-4653-8e5d-78a89ea83ff9" />
 
-<img width="350" alt="simulator_screenshot_1961FA8A-3E73-488B-AAF7-C8D5C2B1CF9B" src="https://github.com/user-attachments/assets/ae1725a5-f4f3-4c95-97e2-5055d7f7e2f0" />
+<img width="350" alt="simulator_screenshot_91E7AA08-B641-4BCE-9515-517057774D83" src="https://github.com/user-attachments/assets/5fdd7bdf-d8a1-4330-9ec1-29ef49351e59" />
 
-
-
+<img width="350" alt="simulator_screenshot_D3CC0D7C-5007-4997-8076-4783B2FA4AC7" src="https://github.com/user-attachments/assets/e427bbb2-81af-4a4e-afda-9a7f5d33daf1" />
 
 
