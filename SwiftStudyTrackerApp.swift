@@ -14,6 +14,6 @@ struct SwiftStudyTrackerApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: StudyEntry.self)
+        .modelContainer(for: [StudyEntry.self, Tag.self])
     }
 }
