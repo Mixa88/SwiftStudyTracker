@@ -26,16 +26,20 @@ struct ContentView: View {
                 } else {
                     List {
                         ForEach(entries) { entry in
+                            NavigationLink(value: entry) {
                                 HStack {
-                                    VStack {
+                                    VStack(alignment: .leading) {
                                         Text(entry.topic)
                                             .font(.headline)
                                         Text(entry.source)
                                             .foregroundStyle(.secondary)
                                     }
                                     
+                                    Spacer()
+                                    
                                     Text("\(entry.durationInMinutes) min")
                                 }
+                            }
                             
                         }
                         .onDelete(perform: deleteEntries)
@@ -44,6 +48,9 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Study Entries 📚")
+            .navigationDestination(for: StudyEntry.self) { entry in
+                DetailEntryView(entry: entry)
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
