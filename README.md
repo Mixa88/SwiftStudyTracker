@@ -42,8 +42,6 @@ It was inspired by Paul Hudson’s lessons and serves as my first "from-scratch"
 
 ## 📸 Screenshots
 
-(Screenshots will be here soon)
-
 <img width="350" alt="simulator_screenshot_9FFC76C9-C787-432F-8EA7-862E1B870690" src="https://github.com/user-attachments/assets/ff081483-b496-4307-be4b-1d85fa2aec22" />
 
 <img width="350" alt="simulator_screenshot_B52B41F5-DB89-4FB5-A5D6-A8342E5A9405" src="https://github.com/user-attachments/assets/db6b2074-6342-4cfd-bdc7-c4363d16cf6d" />
