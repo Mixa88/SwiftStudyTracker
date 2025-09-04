@@ -18,7 +18,7 @@ struct FilteredListView: View {
         let predicate: Predicate<StudyEntry>?
         
         if let tag = selectedTag {
-            // Эта логика остается прежней и теперь будет работать правильно
+            
             let tagID = tag.id
             predicate = #Predicate<StudyEntry> { entry in
                 entry.tags.contains { $0.id == tagID }
@@ -27,12 +27,12 @@ struct FilteredListView: View {
             predicate = nil
         }
         
-        // Инициализируем @Query с правильным фильтром
+        
         _entries = Query(filter: predicate, sort: \.date, order: .reverse)
     }
     
     var body: some View {
-        // Сюда мы перенесли всю логику отображения списка
+        
         List {
             ForEach(entries) { entry in
                 NavigationLink(value: entry) {
@@ -72,8 +72,6 @@ struct FilteredListView: View {
         }
     }
     
-    // Функция удаления теперь принадлежит этому View
-    // Нам нужно получить доступ к modelContext
     @Environment(\.modelContext) var modelContext
     
     func deleteEntries(at offsets: IndexSet) {
